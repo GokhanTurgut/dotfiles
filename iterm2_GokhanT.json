@@ -61,7 +61,7 @@
     "Red Component" : 0.80392156862745101,
     "Color Space" : "sRGB",
     "Blue Component" : 0.95686274509803926,
-    "Alpha Component" : 0.070000000000000007,
+    "Alpha Component" : 0.070000000000000034,
     "Green Component" : 0.83921568627450982
   },
   "BM Growl" : true,
@@ -374,7 +374,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.70588235294117652
   },
-  "Window Type" : 15,
+  "Window Type" : 0,
   "Use Bright Bold" : true,
   "Cursor Text Color" : {
     "Red Component" : 0.80392156862745101,
@@ -425,6 +425,7 @@
   },
   "Ambiguous Double Width" : false,
   "Blur Radius" : 5.0541679869306844,
+  "Cursor Type" : 2,
   "Ansi 0 Color" : {
     "Red Component" : 0.27058823529411763,
     "Color Space" : "sRGB",
@@ -433,7 +434,7 @@
     "Green Component" : 0.27843137254901962
   },
   "Blur" : false,
-  "Normal Font" : "JetBrainsMonoNerdFontComplete-Regular 14",
+  "Normal Font" : "JetBrainsMonoNF-Regular 13",
   "Vertical Spacing" : 1,
   "Use Underline Color" : false,
   "Ansi 7 Color" : {
@@ -474,6 +475,7 @@
   },
   "Screen" : 0,
   "Custom Tab Title" : "GokhanT",
+  "Initial Use Transparency" : true,
   "Non Ascii Font" : "Monaco 12",
   "Ansi 13 Color" : {
     "Red Component" : 0.96078431372549022,
