@@ -110,31 +110,33 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# use vi key bindings
+# nvm configuration
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# Use vi key bindings
 bindkey -v
-# avoid the annoying backspace/delete issue 
-# where backspace stops deleting characters
+# Avoid the annoying backspace/delete issue 
+# Where backspace stops deleting characters
 bindkey -v '^?' backward-delete-char
-# use jk to escape from insert mode
+# Use jk to escape from insert mode
 bindkey -M viins 'jk' vi-cmd-mode
-
-for f in ~/.gusto/*; do source $f; done
-
-# To disable the fork safety check in Spring
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-export GPG_TTY=$TTY
-
-# To use nvim as the default editor
-export EDITOR=nvim
-export VISUAL="$EDITOR"
-export GIT_EDITOR=nvim
 
 # To disable codeowners check in commits for ZP
 export DISABLE_CODEOWNERS_COMMITTER_CHECK=true
 
-eval "$(rbenv init -)"
+# To disable the fork safety check in Spring
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+# To disable spring
+export DISABLE_SPRING=1
+
+# Set postgresql path
+export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
+
+# Add local bin to path
+export PATH="~/.local/bin:$PATH"
 
 # Aliases
 alias zp='cd ~/workspace/zenpayroll'
@@ -143,3 +145,7 @@ alias vim='nvim'
 alias ta='tmux attach'
 alias lg='lazygit'
 alias cl='clear'
+alias tn='tmux new -s Gusto'
+
+# Start rbenv
+eval "$(rbenv init -)"
