@@ -1,5 +1,0 @@
-require("gokhan.plugins-setup")
-require("gokhan.core.options")
-require("gokhan.core.keymaps")
-require("gokhan.core.colorscheme")
-require("gokhan.plugins.comment")
